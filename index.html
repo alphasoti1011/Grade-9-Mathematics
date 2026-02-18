@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 9 Mathematics - Topic 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true
+            }
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-box {
+            background: white;
+            border: 2px solid #1565C0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .info-box strong {
+            color: #1565C0;
+        }
+        
+        .info-inputs {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        .info-field {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .info-field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #1565C0;
+        }
+        
+        .info-field input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #1565C0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .header-box {
+            background: #E8F0FE;
+            border: 2px solid #1565C0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header-box h1 {
+            color: #1565C0;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .header-box h2 {
+            color: #1565C0;
+            font-size: 22px;
+        }
+        
+        .exercise-header {
+            background: #BBDEFB;
+            border: 2px solid #1565C0;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #1565C0;
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+        
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+        
+        .answer-box {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-left: 3px solid #1565C0;
+        }
+        
+        .answer-box label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .answer-box input, .answer-box textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .answer-box textarea {
+            min-height: 80px;
+            resize: vertical;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .sub-questions {
+            margin-left: 20px;
+        }
+        
+        .download-btn {
+            background: #1565C0;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #0D47A1;
+        }
+        
+        .numbers-list {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info-box">
+            <div class="info-inputs">
+                <div class="info-field">
+                    <label for="studentName">Name:</label>
+                    <input type="text" id="studentName" placeholder="Enter your name">
+                </div>
+                <div class="info-field">
+                    <label for="studentDate">Date:</label>
+                    <input type="date" id="studentDate">
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-box">
+            <h1>Grade 9 Mathematics</h1>
+            <h2>Topic 1 - Whole Numbers</h2>
+        </div>
+        
+        <div class="exercise-header">EXERCISE 1.1</div>
+        
+        <!-- Question 1 -->
+        <div class="question">
+            <div class="question-title">1. Decide whether the following numbers are rational or irrational numbers:</div>
+            <div class="numbers-list">
+                $\sqrt{25}$ ; $-65{,}2$ ; $-\sqrt{81}$ ; $\frac{22}{7}$ ; $3{,}14$ ; $\pi$ ; $3\sqrt{15}$ ; $\sqrt[3]{-27}$
+            </div>
+            <div class="answer-box">
+                <label>Your answer:</label>
+                <textarea id="q1" placeholder="List each number and classify it as rational or irrational"></textarea>
+            </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="question">
+            <div class="question-title">2. Given the list of numbers $\left[-7, 7, 5, \sqrt{-6}, 8, \sqrt{35}, 36, \frac{71}{3}\right]$. Write down:</div>
+            <div class="sub-questions">
+                <div class="answer-box">
+                    <label>a) A prime number:</label>
+                    <input type="text" id="q2a">
+                </div>
+                <div class="answer-box">
+                    <label>b) An irrational number:</label>
+                    <input type="text" id="q2b">
+                </div>
+                <div class="answer-box">
+                    <label>c) A factor of 32:</label>
+                    <input type="text" id="q2c">
+                </div>
+                <div class="answer-box">
+                    <label>d) A square number:</label>
+                    <input type="text" id="q2d">
+                </div>
+                <div class="answer-box">
+                    <label>e) An unreal number:</label>
+                    <input type="text" id="q2e">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="question">
+            <div class="question-title">3. Classify each number below as an integer, fraction, mixed number or decimal number:</div>
+            <div class="sub-questions">
+                <div class="answer-box">
+                    <label>a) $\frac{125}{500}$:</label>
+                    <input type="text" id="q3a">
+                </div>
+                <div class="answer-box">
+                    <label>b) $-0{,}67$:</label>
+                    <input type="text" id="q3b">
+                </div>
+                <div class="answer-box">
+                    <label>c) $5\,416$:</label>
+                    <input type="text" id="q3c">
+                </div>
+                <div class="answer-box">
+                    <label>d) $6\frac{2}{5}$:</label>
+                    <input type="text" id="q3d">
+                </div>
+                <div class="answer-box">
+                    <label>e) $\frac{18}{45}$:</label>
+                    <input type="text" id="q3e">
+                </div>
+                <div class="answer-box">
+                    <label>f) $0{,}375$:</label>
+                    <input type="text" id="q3f">
+                </div>
+                <div class="answer-box">
+                    <label>g) $1{,}397$:</label>
+                    <input type="text" id="q3g">
+                </div>
+                <div class="answer-box">
+                    <label>h) $-5\frac{7}{9}$:</label>
+                    <input type="text" id="q3h">
+                </div>
+                <div class="answer-box">
+                    <label>i) $6\,903\,651$:</label>
+                    <input type="text" id="q3i">
+                </div>
+                <div class="answer-box">
+                    <label>j) $\frac{18}{918}$:</label>
+                    <input type="text" id="q3j">
+                </div>
+                <div class="answer-box">
+                    <label>k) $-436{,}029$:</label>
+                    <input type="text" id="q3k">
+                </div>
+                <div class="answer-box">
+                    <label>l) $12\frac{3}{4}$:</label>
+                    <input type="text" id="q3l">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="question">
+            <div class="question-title">4. Write each of the rational numbers below as a common fraction in its simplest form (without the use of a calculator):</div>
+            <div class="sub-questions">
+                <div class="answer-box">
+                    <label>a) $\frac{20}{24}$:</label>
+                    <input type="text" id="q4a">
+                </div>
+                <div class="answer-box">
+                    <label>b) $-\frac{48}{80}$:</label>
+                    <input type="text" id="q4b">
+                </div>
+                <div class="answer-box">
+                    <label>c) $2\frac{5}{40}$:</label>
+                    <input type="text" id="q4c">
+                </div>
+                <div class="answer-box">
+                    <label>d) $-7\frac{25}{200}$:</label>
+                    <input type="text" id="q4d">
+                </div>
+                <div class="answer-box">
+                    <label>e) $5\frac{6}{8}$:</label>
+                    <input type="text" id="q4e">
+                </div>
+                <div class="answer-box">
+                    <label>f) $\frac{87}{170}$:</label>
+                    <input type="text" id="q4f">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 5 -->
+        <div class="question">
+            <div class="question-title">5. Write the following mixed numbers as improper fractions:</div>
+            <div class="sub-questions">
+                <div class="answer-box">
+                    <label>a) $6\frac{4}{9}$:</label>
+                    <input type="text" id="q5a">
+                </div>
+                <div class="answer-box">
+                    <label>b) $-4\frac{5}{6}$:</label>
+                    <input type="text" id="q5b">
+                </div>
+                <div class="answer-box">
+                    <label>c) $-11\frac{2}{3}$:</label>
+                    <input type="text" id="q5c">
+                </div>
+                <div class="answer-box">
+                    <label>d) $13\frac{7}{15}$:</label>
+                    <input type="text" id="q5d">
+                </div>
+            </div>
+        </div>
+        
+        <button class="download-btn" onclick="downloadAnswers()">Download My Answers</button>
+    </div>
+    
+    <script>
+        // Set today's date as default
+        document.getElementById('studentDate').valueAsDate = new Date();
+        
+        function downloadAnswers() {
+            const name = document.getElementById('studentName').value || 'Student';
+            const date = document.getElementById('studentDate').value || 'Not specified';
+            
+            let content = '=============================================\n';
+            content += 'GRADE 9 MATHEMATICS HOMEWORK\n';
+            content += 'Topic 1 - Whole Numbers - Exercise 1.1\n';
+            content += '=============================================\n\n';
+            content += 'Student Name: ' + name + '\n';
+            content += 'Date: ' + date + '\n';
+            content += '=============================================\n\n';
+            
+            // Question 1
+            content += 'Question 1: Decide whether the following numbers are rational or irrational numbers\n';
+            content += document.getElementById('q1').value + '\n\n';
+            
+            // Question 2
+            content += 'Question 2: Given the list of numbers [-7, 7, 5, √(-6), 8, √35, 36, 71/3]\n';
+            content += 'a) A prime number: ' + document.getElementById('q2a').value + '\n';
+            content += 'b) An irrational number: ' + document.getElementById('q2b').value + '\n';
+            content += 'c) A factor of 32: ' + document.getElementById('q2c').value + '\n';
+            content += 'd) A square number: ' + document.getElementById('q2d').value + '\n';
+            content += 'e) An unreal number: ' + document.getElementById('q2e').value + '\n\n';
+            
+            // Question 3
+            content += 'Question 3: Classify each number\n';
+            content += 'a) 125/500: ' + document.getElementById('q3a').value + '\n';
+            content += 'b) -0,67: ' + document.getElementById('q3b').value + '\n';
+            content += 'c) 5 416: ' + document.getElementById('q3c').value + '\n';
+            content += 'd) 6 2/5: ' + document.getElementById('q3d').value + '\n';
+            content += 'e) 18/45: ' + document.getElementById('q3e').value + '\n';
+            content += 'f) 0,375: ' + document.getElementById('q3f').value + '\n';
+            content += 'g) 1,397: ' + document.getElementById('q3g').value + '\n';
+            content += 'h) -5 7/9: ' + document.getElementById('q3h').value + '\n';
+            content += 'i) 6 903 651: ' + document.getElementById('q3i').value + '\n';
+            content += 'j) 18/918: ' + document.getElementById('q3j').value + '\n';
+            content += 'k) -436,029: ' + document.getElementById('q3k').value + '\n';
+            content += 'l) 12 3/4: ' + document.getElementById('q3l').value + '\n\n';
+            
+            // Question 4
+            content += 'Question 4: Write as common fraction in simplest form\n';
+            content += 'a) 20/24: ' + document.getElementById('q4a').value + '\n';
+            content += 'b) -48/80: ' + document.getElementById('q4b').value + '\n';
+            content += 'c) 2 5/40: ' + document.getElementById('q4c').value + '\n';
+            content += 'd) -7 25/200: ' + document.getElementById('q4d').value + '\n';
+            content += 'e) 5 6/8: ' + document.getElementById('q4e').value + '\n';
+            content += 'f) 87/170: ' + document.getElementById('q4f').value + '\n\n';
+            
+            // Question 5
+            content += 'Question 5: Write as improper fractions\n';
+            content += 'a) 6 4/9: ' + document.getElementById('q5a').value + '\n';
+            content += 'b) -4 5/6: ' + document.getElementById('q5b').value + '\n';
+            content += 'c) -11 2/3: ' + document.getElementById('q5c').value + '\n';
+            content += 'd) 13 7/15: ' + document.getElementById('q5d').value + '\n';
+            
+            content += '\n=============================================\n';
+            content += 'END OF HOMEWORK SUBMISSION\n';
+            content += '=============================================\n';
+            
+            // Create download
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = name.replace(/\s+/g, '_') + '_Math_Homework_Exercise_1.1.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
