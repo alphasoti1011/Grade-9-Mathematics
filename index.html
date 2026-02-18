@@ -1,98 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grade 9 Maths | Alpha Soti</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 9 Maths | Homework Portal</title>
 
-    header {
-      padding: 60px 20px 30px 20px;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+}
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+header {
+  background: #1f3c88;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
 
-    p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
+h1 {
+  margin: 0;
+}
 
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      padding: 40px 20px 80px 20px;
-    }
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-    .card {
-      background: white;
-      color: #222;
-      width: 260px;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-decoration: none;
-    }
+.month-group {
+  margin-bottom: 40px;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    }
+.month-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
 
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
+.homework-item {
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .card p {
-      color: #555;
-      font-size: 15px;
-    }
+.homework-item a {
+  text-decoration: none;
+  color: #1f3c88;
+  font-weight: bold;
+}
 
-    footer {
-      padding: 20px;
-      font-size: 14px;
-      opacity: 0.7;
-    }
-  </style>
+.date {
+  font-size: 14px;
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Grade 9 Mathematics</h1>
-    <p>Structured lessons, guided homework, and clear explanations.</p>
-  </header>
+<header>
+  <h1>Grade 9 Mathematics</h1>
+  <p>Homework Portal</p>
+</header>
 
-  <div class="container">
-    
-    <a href="homework1/" class="card">
-      <h2>Homework_Grade9_Topic1_Section5_Ex1.2</h2>
-      <p>Introduction to Algebraic Expressions and Simplification.</p>
-    </a>
+<div class="container" id="homeworkList">
+  <!-- Homework will be inserted here automatically -->
+</div>
 
-    <a href="homework2/" class="card">
-      <h2>Homework_Grade9_Topic1_Section5_Ex1.2</h2>
-      <p>Linear Equations and Problem Solving Practice.</p>
-    </a>
+<footer>
+  © 2026 Alpha Soti – The Math Coach
+</footer>
 
-  </div>
+<script>
+const homeworks = [
+  { title: "Linear Equations Practice", link: "homework2/", date: "2026-02-10" },
+  { title: "Algebraic Expressions", link: "homework1/", date: "2026-01-28" },
+  { title: "Graph Introduction", link: "homework3/", date: "2026-02-15" }
+];
 
-  <footer>
-    © 2026 Alpha Soti – The Math Coach
-  </footer>
+// Sort newest first
+homeworks.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+const container = document.getElementById("homeworkList");
+let currentMonth = "";
+
+homeworks.forEach(hw => {
+  const dateObj = new Date(hw.date);
+  const monthYear = dateObj.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+  if (monthYear !== currentMonth) {
+    currentMonth = monthYear;
+
+    const monthDiv = document.createElement("div");
+    monthDiv.className = "month-group";
+
+    const monthTitle = document.createElement("div");
+    monthTitle.className = "month-title";
+    monthTitle.textContent = monthYear;
+
+    monthDiv.appendChild(monthTitle);
+    container.appendChild(monthDiv);
+  }
+
+  const lastMonthGroup = container.lastElementChild;
+
+  const hwDiv = document.createElement("div");
+  hwDiv.className = "homework-item";
+
+  hwDiv.innerHTML = `
+    <a href="${hw.link}">${hw.title}</a>
+    <span class="date">${dateObj.toLocaleDateString()}</span>
+  `;
+
+  lastMonthGroup.appendChild(hwDiv);
+});
+</script>
 
 </body>
 </html>
