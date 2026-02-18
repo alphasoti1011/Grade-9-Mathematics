@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 9 Mathematics - Topic 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true
+            }
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-box {
+            background: white;
+            border: 2px solid #1565C0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .info-box strong {
+            color: #1565C0;
+        }
+        
+        .info-inputs {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        .info-field {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .info-field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #1565C0;
+        }
+        
+        .info-field input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #1565C0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .header-box {
+            background: #E8F0FE;
+            border: 2px solid #1565C0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header-box h1 {
+            color: #1565C0;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .header-box h2 {
+            color: #1565C0;
+            font-size: 22px;
+        }
+        
+        .exercise-header {
+            background: #BBDEFB;
+            border: 2px solid #1565C0;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #1565C0;
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+        
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+        
+        .answer-box {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-left: 3px solid #1565C0;
+        }
+        
+        .answer-box label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .answer-box input, .answer-box textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .answer-box textarea {
+            min-height: 80px;
+            resize: vertical;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .sub-questions {
+            margin-left: 20px;
+        }
+        
+        .download-btn {
+            background: #1565C0;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #0D47A1;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info-box">
+            <div class="info-inputs">
+                <div class="info-field">
+                    <label for="studentName">Name:</label>
+                    <input type="text" id="studentName" placeholder="Enter your name">
+                </div>
+                <div class="info-field">
+                    <label for="studentDate">Date:</label>
+                    <input type="date" id="studentDate">
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-box">
+            <h1>Grade 9 Mathematics</h1>
+            <h2>Topic 1 - Whole Numbers</h2>
+        </div>
+        
+        <div class="exercise-header">EXERCISE 1.2</div>
+        
+        <!-- Question 1 -->
+        <div class="question">
+            <div class="question-title">1. Simplify the following:</div>
+            <div class="sub-questions">
+                <div class="two-column">
+                    <div class="answer-box">
+                        <label>a) $6\left(\frac{1}{2} + \frac{1}{3}\right)$:</label>
+                        <input type="text" id="q1a">
+                    </div>
+                    <div class="answer-box">
+                        <label>b) $\frac{1}{2}(18+36)$:</label>
+                        <input type="text" id="q1b">
+                    </div>
+                    <div class="answer-box">
+                        <label>c) $12(13 - 8) - 11(22 - 17)$:</label>
+                        <input type="text" id="q1c">
+                    </div>
+                    <div class="answer-box">
+                        <label>d) $1{,}5 \times 3 + 1{,}5 \times 4$:</label>
+                        <input type="text" id="q1d">
+                    </div>
+                    <div class="answer-box">
+                        <label>e) $\frac{1}{8} \times 2 \times 8$:</label>
+                        <input type="text" id="q1e">
+                    </div>
+                    <div class="answer-box">
+                        <label>f) $\frac{3}{4} \times \frac{4}{3} \times 12$:</label>
+                        <input type="text" id="q1f">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="question">
+            <div class="question-title">2. Calculate:</div>
+            <div class="sub-questions">
+                <div class="two-column">
+                    <div class="answer-box">
+                        <label>a) $345\,692 \times 0$:</label>
+                        <input type="text" id="q2a">
+                    </div>
+                    <div class="answer-box">
+                        <label>b) $671{,}324 \times 1$:</label>
+                        <input type="text" id="q2b">
+                    </div>
+                    <div class="answer-box">
+                        <label>c) $125 \times 0 + \left(\frac{3}{5}\times \frac{5}{3}\right)$:</label>
+                        <input type="text" id="q2c">
+                    </div>
+                    <div class="answer-box">
+                        <label>d) $(0 \times 5{,}17) + (0 \div 6{,}25)$:</label>
+                        <input type="text" id="q2d">
+                    </div>
+                    <div class="answer-box">
+                        <label>e) $(\sqrt{25}\div 1) + (\sqrt{26}\div 0)$:</label>
+                        <input type="text" id="q2e">
+                    </div>
+                    <div class="answer-box">
+                        <label>f) $7{,}125 + 0 - 9{,}287 \times 0$:</label>
+                        <input type="text" id="q2f">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="question">
+            <div class="question-title">3. Simplify the following:</div>
+            <div class="sub-questions">
+                <div class="two-column">
+                    <div class="answer-box">
+                        <label>a) $0{,}8 \times 7 + 4{,}5 \times 3$:</label>
+                        <input type="text" id="q3a">
+                    </div>
+                    <div class="answer-box">
+                        <label>b) $175 + 18 \times 2$:</label>
+                        <input type="text" id="q3b">
+                    </div>
+                    <div class="answer-box">
+                        <label>c) $120 \times 3 + 110 \times 4$:</label>
+                        <input type="text" id="q3c">
+                    </div>
+                    <div class="answer-box">
+                        <label>d) $\frac{1}{5} \times \frac{5}{3} + \frac{7}{3} \times \frac{2}{7}$:</label>
+                        <input type="text" id="q3d">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="question">
+            <div class="question-title">4. Solve:</div>
+            <div class="sub-questions">
+                <div class="two-column">
+                    <div class="answer-box">
+                        <label>a) $150 \times (30 + 120)$:</label>
+                        <input type="text" id="q4a">
+                    </div>
+                    <div class="answer-box">
+                        <label>b) $180 + (400 + 240)$:</label>
+                        <input type="text" id="q4b">
+                    </div>
+                    <div class="answer-box">
+                        <label>c) $72(400 - 300)$:</label>
+                        <input type="text" id="q4c">
+                    </div>
+                    <div class="answer-box">
+                        <label>d) $96+(-96)+ 32 \div 32 - 25 \times \frac{1}{25}$:</label>
+                        <input type="text" id="q4d">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 5 -->
+        <div class="question">
+            <div class="question-title">5. Say whether the following statements are true or false:</div>
+            <div class="sub-questions">
+                <div class="answer-box">
+                    <label>a) The sum of two rational numbers is always a rational number.</label>
+                    <input type="text" id="q5a" placeholder="True or False">
+                </div>
+                <div class="answer-box">
+                    <label>b) The difference between two rational numbers is always a rational number.</label>
+                    <input type="text" id="q5b" placeholder="True or False">
+                </div>
+                <div class="answer-box">
+                    <label>c) The product of two rational numbers is always a rational number.</label>
+                    <input type="text" id="q5c" placeholder="True or False">
+                </div>
+                <div class="answer-box">
+                    <label>d) The quotient of two rational numbers is always a rational number.</label>
+                    <input type="text" id="q5d" placeholder="True or False">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 6 -->
+        <div class="question">
+            <div class="question-title">6. Calculate:</div>
+            <div class="sub-questions">
+                <div class="two-column">
+                    <div class="answer-box">
+                        <label>a) $45\,231 + 7\,050$:</label>
+                        <input type="text" id="q6a">
+                    </div>
+                    <div class="answer-box">
+                        <label>b) $140\,006 - 23\,987$:</label>
+                        <input type="text" id="q6b">
+                    </div>
+                    <div class="answer-box">
+                        <label>c) $8\,950 - 429$:</label>
+                        <input type="text" id="q6c">
+                    </div>
+                    <div class="answer-box">
+                        <label>d) $18\,532 - 6\,732$:</label>
+                        <input type="text" id="q6d">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 7 -->
+        <div class="question">
+            <div class="question-title">7. Use long multiplication to multiply the following and check the answers on your calculator:</div>
+            <div class="sub-questions">
+                <div class="two-column">
+                    <div class="answer-box">
+                        <label>a) $2\,189 \times 21$:</label>
+                        <textarea id="q7a" placeholder="Show your working"></textarea>
+                    </div>
+                    <div class="answer-box">
+                        <label>b) $6\,034 \times 36$:</label>
+                        <textarea id="q7b" placeholder="Show your working"></textarea>
+                    </div>
+                    <div class="answer-box">
+                        <label>c) $50\,201 \times 45$:</label>
+                        <textarea id="q7c" placeholder="Show your working"></textarea>
+                    </div>
+                    <div class="answer-box">
+                        <label>d) $6\,891 \times 720$:</label>
+                        <textarea id="q7d" placeholder="Show your working"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question 8 -->
+        <div class="question">
+            <div class="question-title">8. Use long division to divide the following and check the answers on your calculator:</div>
+            <div class="sub-questions">
+                <div class="two-column">
+                    <div class="answer-box">
+                        <label>a) $8\,700 \div 60$:</label>
+                        <textarea id="q8a" placeholder="Show your working"></textarea>
+                    </div>
+                    <div class="answer-box">
+                        <label>b) $34\,719 \div 71$:</label>
+                        <textarea id="q8b" placeholder="Show your working"></textarea>
+                    </div>
+                    <div class="answer-box">
+                        <label>c) $208\,640 \div 160$:</label>
+                        <textarea id="q8c" placeholder="Show your working"></textarea>
+                    </div>
+                    <div class="answer-box">
+                        <label>d) $102\,024 \div 156$:</label>
+                        <textarea id="q8d" placeholder="Show your working"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="download-btn" onclick="downloadAnswers()">Download My Answers</button>
+    </div>
+    
+    <script>
+        // Set today's date as default
+        document.getElementById('studentDate').valueAsDate = new Date();
+        
+        function downloadAnswers() {
+            const name = document.getElementById('studentName').value || 'Student';
+            const date = document.getElementById('studentDate').value || 'Not specified';
+            
+            let content = '=============================================\n';
+            content += 'GRADE 9 MATHEMATICS HOMEWORK\n';
+            content += 'Topic 1 - Whole Numbers - Exercise 1.2\n';
+            content += '=============================================\n\n';
+            content += 'Student Name: ' + name + '\n';
+            content += 'Date: ' + date + '\n';
+            content += '=============================================\n\n';
+            
+            // Question 1
+            content += 'Question 1: Simplify the following\n';
+            content += 'a) 6(1/2 + 1/3): ' + document.getElementById('q1a').value + '\n';
+            content += 'b) 1/2(18+36): ' + document.getElementById('q1b').value + '\n';
+            content += 'c) 12(13-8) - 11(22-17): ' + document.getElementById('q1c').value + '\n';
+            content += 'd) 1.5×3 + 1.5×4: ' + document.getElementById('q1d').value + '\n';
+            content += 'e) 1/8 × 2 × 8: ' + document.getElementById('q1e').value + '\n';
+            content += 'f) 3/4 × 4/3 × 12: ' + document.getElementById('q1f').value + '\n\n';
+            
+            // Question 2
+            content += 'Question 2: Calculate\n';
+            content += 'a) 345,692 × 0: ' + document.getElementById('q2a').value + '\n';
+            content += 'b) 671,324 × 1: ' + document.getElementById('q2b').value + '\n';
+            content += 'c) 125×0 + (3/5×5/3): ' + document.getElementById('q2c').value + '\n';
+            content += 'd) (0×5.17) + (0÷6.25): ' + document.getElementById('q2d').value + '\n';
+            content += 'e) (√25÷1) + (√26÷0): ' + document.getElementById('q2e').value + '\n';
+            content += 'f) 7.125 + 0 - 9.287×0: ' + document.getElementById('q2f').value + '\n\n';
+            
+            // Question 3
+            content += 'Question 3: Simplify the following\n';
+            content += 'a) 0.8×7 + 4.5×3: ' + document.getElementById('q3a').value + '\n';
+            content += 'b) 175 + 18×2: ' + document.getElementById('q3b').value + '\n';
+            content += 'c) 120×3 + 110×4: ' + document.getElementById('q3c').value + '\n';
+            content += 'd) 1/5×5/3 + 7/3×2/7: ' + document.getElementById('q3d').value + '\n\n';
+            
+            // Question 4
+            content += 'Question 4: Solve\n';
+            content += 'a) 150 × (30 + 120): ' + document.getElementById('q4a').value + '\n';
+            content += 'b) 180 + (400 + 240): ' + document.getElementById('q4b').value + '\n';
+            content += 'c) 72(400 - 300): ' + document.getElementById('q4c').value + '\n';
+            content += 'd) 96+(-96)+ 32÷32 - 25×1/25: ' + document.getElementById('q4d').value + '\n\n';
+            
+            // Question 5
+            content += 'Question 5: True or False\n';
+            content += 'a) Sum of two rational numbers is always rational: ' + document.getElementById('q5a').value + '\n';
+            content += 'b) Difference between two rational numbers is always rational: ' + document.getElementById('q5b').value + '\n';
+            content += 'c) Product of two rational numbers is always rational: ' + document.getElementById('q5c').value + '\n';
+            content += 'd) Quotient of two rational numbers is always rational: ' + document.getElementById('q5d').value + '\n\n';
+            
+            // Question 6
+            content += 'Question 6: Calculate\n';
+            content += 'a) 45,231 + 7,050: ' + document.getElementById('q6a').value + '\n';
+            content += 'b) 140,006 - 23,987: ' + document.getElementById('q6b').value + '\n';
+            content += 'c) 8,950 - 429: ' + document.getElementById('q6c').value + '\n';
+            content += 'd) 18,532 - 6,732: ' + document.getElementById('q6d').value + '\n\n';
+            
+            // Question 7
+            content += 'Question 7: Long multiplication\n';
+            content += 'a) 2,189 × 21:\n' + document.getElementById('q7a').value + '\n\n';
+            content += 'b) 6,034 × 36:\n' + document.getElementById('q7b').value + '\n\n';
+            content += 'c) 50,201 × 45:\n' + document.getElementById('q7c').value + '\n\n';
+            content += 'd) 6,891 × 720:\n' + document.getElementById('q7d').value + '\n\n';
+            
+            // Question 8
+            content += 'Question 8: Long division\n';
+            content += 'a) 8,700 ÷ 60:\n' + document.getElementById('q8a').value + '\n\n';
+            content += 'b) 34,719 ÷ 71:\n' + document.getElementById('q8b').value + '\n\n';
+            content += 'c) 208,640 ÷ 160:\n' + document.getElementById('q8c').value + '\n\n';
+            content += 'd) 102,024 ÷ 156:\n' + document.getElementById('q8d').value + '\n\n';
+            
+            content += '=============================================\n';
+            content += 'END OF HOMEWORK SUBMISSION\n';
+            content += '=============================================\n';
+            
+            // Create download
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = name.replace(/\s+/g, '_') + '_Math_Homework_Exercise_1.2.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
